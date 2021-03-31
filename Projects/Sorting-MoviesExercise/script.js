@@ -1,7 +1,7 @@
 /**
- * DONE: Change sortMoviesByRank() function to sort movies list by rank
- * DONE: Sort movies by id, rank, and title through dynamic function
- * DONE: Create helper function called getMaxMovieObject() for finding max movie
+ * TODO: Change sortMoviesByRank() function to sort movies list by rank
+ * TODO: Sort movies by id, rank, and title through dynamic function
+ * TODO: Create helper function called getMaxMovieObject() for finding max movie
  **/ 
 
 // List of movies
