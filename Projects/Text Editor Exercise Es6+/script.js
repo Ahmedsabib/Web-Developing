@@ -15,11 +15,11 @@ makeItalic = (elem) =>{
 
 makeUnderline = (elem) =>{
     elem.classList.toggle('undeline');
-    let formattedtext = document.getElementById('text-output');
-    if(formattedtext.classList.contains('underline')){
-        formattedtext.classList.remove('underline');
+    let formattedText = document.getElementById('text-output');
+    if(formattedText.classList.contains('underline')){
+        formattedText.classList.remove('underline');
     } else{
-        formattedtext.classList.add('underline');
+        formattedText.classList.add('underline');
     }
 }
 
