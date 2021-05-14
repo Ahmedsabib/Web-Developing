@@ -14,7 +14,7 @@ makeItalic = (elem) =>{
 }
 
 makeUnderline = (elem) =>{
-    elem.classList.toggle('undeline');
+    elem.classList.toggle('active');
     let formattedText = document.getElementById('text-output');
     if(formattedText.classList.contains('underline')){
         formattedText.classList.remove('underline');
