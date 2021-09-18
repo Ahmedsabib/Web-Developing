@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 75%;
+    margin-top: 200px;
+    text-align: center;
+    padding: 25px;
+    border: 1px solid black;
+    height: 200px;
+}
+
+.heading {
+    color: blueviolet;
+}
+
+.main {
+    padding-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.dropdown-btn {
+    padding-top: 8px;
+    height: 15px;
+}
+
+.color-btn {
+    padding-left: 8px;
+}
