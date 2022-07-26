@@ -22,19 +22,3 @@
 .flex-box-rps img:hover {
     box-shadow: 0px 10px 50px rgba(37, 50, 233, 1);
 }
-
-/* .container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    border: 1px solid black;
-    text-align: center;
-}
-
-.flex-box-rps {
-    display: flex;
-    justify-content: space-around;
-    padding: 18px;
-    border: 1px solid black;
-    width: 100%;
-} */
