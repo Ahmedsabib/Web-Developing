@@ -1,9 +1,3 @@
-/**
- * TODO: Change sortMoviesByRank() function to sort movies list by rank
- * TODO: Sort movies by id, rank, and title through dynamic function
- * TODO: Create helper function called getMaxMovieObject() for finding max movie
- **/ 
-
 // List of movies
 let movies = [
     {
@@ -60,14 +54,9 @@ let movies = [
 
 window.onload = function() {
     let sortedMovies = sortMoviesByAttr(movies, 'rank');
-    // Display Movies list
     displayMovies(sortedMovies);
 }
 
-/**
- * Display list of movies in a table
- * You don't have to worry so much about this
- */
 function displayMovies(movies){
     let table = "<table border='1' style='width: 100%'>";
     table += "<tr><th>ID</th><th>Name</th><th>Rank</th></tr>";
@@ -78,73 +67,38 @@ function displayMovies(movies){
         table += "<td>" + movies[index].rank + "</td>";
         table += "</tr>"
     }
-    // Close the table
     table += "</table>";
     document.getElementById("movies-list").innerHTML = table;
 }
 
-
-/**
- * Sort movies by rank from greatest to smallest 
- * HINT: make sure you are comparing the right value in in if(...)
- * HINT: replace numbers with movies .
- */
 function sortMoviesByRank(movies){
-  // Code from previous sortBestRatingsFirst() function
   for (let j = 0; j < movies.length - 1; j++) {
 
       let max_obj = movies[j];
-    //   {
-    //     title: "Fight Club",
-    //     rank: 10,
-    //     id: "tt0137523"
-    // },
       let max_location = j;
 
       for (let i = j; i < movies.length; i++) {
           if (movies[i].rank > max_obj.rank) {
-              // Know max AND it's index (location)
-              //if we found object with higher rank, then replace max_obj with the new object
               max_obj = movies[i]
               max_location = i
           }
       }
-      // swap the first and tmoviet
-      movies[max_location] = movies[j] // --> 10
+      movies[max_location] = movies[j]
       movies[j] = max_obj
     }
     
     return movies
 }
 
-/**
- ** Sort movies by an attribute
- * @param sortAttr pass in 'id', 'title', or 'rank' to sort by
- */
 function sortMoviesByAttr(movies, sortAttr){
-  // CODE GOES HERE
   for (let j = 0; j < movies.length - 1; j++) {
 
     let max_obj = movies[j];
-  //   {
-  //     title: "Fight Club",
-  //     rank: 10,
-  //     id: "tt0137523"
-  // },
     let max_location = j;
     let max = getMaxMovieObject(movies, j, sortAttr);
     max_obj = max.max_obj;
     max_location = max.max_index;
-    // for (let i = j; i < movies.length; i++) {
-    //     if (movies[i][sortAttr] > max_obj[sortAttr]) {
-    //         // Know max AND it's index (location)
-    //         //if we found object with higher rank, then replace max_obj with the new object
-    //         max_obj = movies[i]
-    //         max_location = i
-    //     }
-    // }
-    // swap the first and tmoviet
-    movies[max_location] = movies[j] // --> 10
+    movies[max_location] = movies[j]
     movies[j] = max_obj
   }
   
@@ -152,13 +106,7 @@ function sortMoviesByAttr(movies, sortAttr){
 
 }
 
-
-/**
- * Retrieve the max movie object based on attribute
- * HINT: make sure you are comparing the right attribute
- */
 function getMaxMovieObject(movies, start, sortAttr){
-  // Code from previous findMaxHelper() function
   let max_obj = movies[start];
   let max_location = start
 
